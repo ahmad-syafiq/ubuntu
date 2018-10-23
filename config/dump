@@ -1,0 +1,27 @@
+#!/usr/bin/php
+<?php
+$file = file_exists('config.php') ? 'config.php' : (file_exists('cfg.php') ? 'cfg.php' : '');
+if (!empty($file))
+{
+	$_SERVER['HTTP_HOST'] = '';
+	include $file;
+	echo shell_exec(
+		"\n"
+		. "echo 'SET foreign_key_checks = 0;' > database.sql\n"
+		. "/usr/bin/mysqldump --skip-comments --skip-add-locks --skip-lock-tables --skip-set-charset --dump-date=FALSE -u {$_DB[0]['USERNAME']} --password='{$_DB[0]['PASSWORD']}' -h {$_DB[0]['SERVER']} {$_DB[0]['DATABASE']} | grep -v '^\/\*![0-9]\{5\}.*\/;$' >> database.sql\n"
+		. "echo 'SET foreign_key_checks = 1;' >> database.sql");
+}else{
+	echo "Masukkan nama database yang ingin di dump, lalu [ENTER]: ";
+	$handle = fopen ("php://stdin","r");
+	$DBNAME = trim(fgets($handle));
+	if (empty($DBNAME))
+	{
+		echo "tidak ada database yang di dump!\n";
+	}else{
+		echo shell_exec(
+			"\n"
+			.	"echo 'SET foreign_key_checks = 0;' > database.sql\n"
+			. "/usr/bin/mysqldump --skip-comments --skip-add-locks --skip-lock-tables --skip-set-charset --dump-date=FALSE -u root --password='root' -h localhost $DBNAME | grep -v '^\/\*![0-9]\{5\}.*\/;$' >> database.sql\n"
+			. "echo 'SET foreign_key_checks = 1;' >> database.sql");
+	}
+}

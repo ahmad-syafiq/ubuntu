@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+\$${1:form}->roll->addInput('${2:image}','condition');
+\$${1:form}->roll->input->${2:image}->setTitle('${3:Title}');
+\$${1:form}->roll->input->${2:image}->addCondition('!=', '', '<a href="'.\$${4:Bbc}->mod['circuit'].'.setting_edit&id=#_id_#&return='.\$${5:return}.'"><img width="40px" src="'.\$${6:Bbc}->mod['image'].'#_value_#" /></a>');
+\$${1:form}->roll->input->${2:image}->setPlaintext(${7:true});
+
+]]></content>
+<tabTrigger>roll_image_condition</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

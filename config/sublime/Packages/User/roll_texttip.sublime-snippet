@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+		
+\$${1:form}->roll->addInput('${2:price}','texttip');
+\$${1:form}->roll->input->${2:price}->setTitle('${3:Harga}');
+\$${1:form}->roll->input->${2:price}->setCaption('${4:More Information}');
+\$${1:form}->roll->input->${2:price}->setTemplate(table(
+	array(
+		'created'      => '{created}',
+		)
+	));
+
+\$${1:form}->roll->input->created->setDateFormat();
+\$${1:form}->roll->input->price->setNumberFormat();
+
+]]></content>
+<tabTrigger>roll_texttip</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

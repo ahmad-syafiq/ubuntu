@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+\$${1:form}->roll->addInput('${2:image}','file');
+\$${1:form}->roll->input->${2:image}->setFieldName('CONCAT(id,"${3:/}",image) AS image');
+\$${1:form}->roll->input->${2:image}->setPlaintext(${4:true});
+\$${1:form}->roll->input->${2:image}->setImageClick(${4:true});
+
+]]></content>
+<tabTrigger>roll_image_file</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
+<!-- 
+$form->roll->addInput('image','file');
+$form->roll->input->image->setFieldName('CONCAT("Setting/",id,"/",image) AS image');
+$form->roll->input->image->setPlaintext( true );
+$form->roll->input->image->setImageClick( true ); -->

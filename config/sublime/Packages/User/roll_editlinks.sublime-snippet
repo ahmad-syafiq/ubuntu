@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+\$${1:form}->roll->addInput('head','multiinput');
+\$${1:form}->roll->input->head->setTitle('Title');
+\$${1:form}->roll->input->head->addInput('edit', 'editlinks', 'info');
+\$${1:form}->roll->input->head->addInput('title', 'sqllinks');
+
+\$${2:url} = \$${3:Bbc->mod['circuit'].}'.';
+\$${1:form}->roll->input->title->setLinks(\$${4:url.}'${5:tour_edit}');
+\$${1:form}->roll->input->title->setLanguage();
+
+\$${1:form}->roll->input->edit->setCaption('');
+\$${1:form}->roll->input->edit->setFieldName('id AS edit');
+\$${1:form}->roll->input->edit->setGetName('class_id');
+\$${1:form}->roll->input->edit->setExtra('rel="admin_link"');
+\$${1:form}->roll->input->edit->setLinks(array(
+	\$${6:url}.'member' => icon('fa-users').' members',
+	\$${6:url}.'module' => icon('fa-book').' modules',
+	\$${6:url}.'event_list'  => icon('fa-calendar').' events',
+));
+]]></content>
+<tabTrigger>roll_editlinks</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

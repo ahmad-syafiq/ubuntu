@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+\$sys->link_css(_URL.'${2:modules/invoice/admin/price}.css', false);
+
+]]></content>
+<tabTrigger>_php_linkcss</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

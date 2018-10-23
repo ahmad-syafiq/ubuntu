@@ -1,0 +1,131 @@
+{
+    "files": [
+        {
+            "alias": "favorite_files_list.json",
+            "file": "/home/x/.config/sublime-text-3/Packages/User/favorite_files_list.json"
+        },
+        {
+            "alias": "error.log",
+            "file": "/var/log/apache2/error.log"
+        },
+        {
+            "alias": "gitolite.conf",
+            "file": "/git/gitolite/gitolite-admin/conf/gitolite.conf"
+        },
+        {
+            "alias": "list update db market",
+            "file": "/home/x/Documents/list update db market"
+        },
+        {
+            "alias": "list update db store",
+            "file": "/home/x/Documents/list update db store"
+        },
+        {
+            "alias": "list update db bin",
+            "file": "/home/x/Documents/list update db bin"
+        },
+        {
+            "alias": "PERINTAH-PERINTAH PENTING.txt",
+            "file": "/home/x/Documents/Documentation/files/PERINTAH-PERINTAH PENTING.txt"
+        },
+        {
+            "alias": "Framework Symfony.txt",
+            "file": "/home/x/Documents/Documentation/files/Framework Symfony.txt"
+        },
+        {
+            "alias": "Aturan Main MLM",
+            "file": "/home/x/Documents/Documentation/files/Aturan Main MLM"
+        },
+        {
+            "alias": "Get List par_id.php",
+            "file": "/home/x/Documents/Documentation/files/Get List par_id.php"
+        },
+        {
+            "alias": "config.js",
+            "file": "/var/www/html/compressor/config.js"
+        },
+        {
+            "alias": "gearman.log",
+            "file": "/var/log/gearman-job-server/gearman.log"
+        },
+        {
+            "alias": "Perintah pouncdb",
+            "file": "/home/x/Documents/Documentation/Penting/Perintah pouncdb"
+        },
+        {
+            "alias": "REVISI GS",
+            "file": "/home/x/Desktop/REVISI GS"
+        },
+        {
+            "alias": "carousel_multidata.php",
+            "file": "/home/x/Documents/Documentation/files/carousel_multidata.php"
+        },
+        {
+            "alias": "Alur Project Merchant",
+            "file": "/home/x/Documents/Documentation/Penting/Alur Project Merchant"
+        },
+        {
+            "alias": "ilog.txt",
+            "file": "/home/x/Desktop/ilog.txt"
+        }
+    ],
+    "groups": {
+        "JS": [
+            {
+                "alias": "validator_time.js",
+                "file": "/home/x/Documents/study/js/validator_time.js"
+            },
+            {
+                "alias": "functionJS OBJ.js",
+                "file": "/home/x/Documents/Documentation/files/functionJS OBJ.js"
+            }
+        ],
+        "Setup Ubuntu": [
+            {
+                "alias": "Default (Linux).sublime-keymap",
+                "file": "/home/x/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
+            },
+            {
+                "alias": "php.ini",
+                "file": "/etc/php/7.0/apache2/php.ini"
+            },
+            {
+                "alias": "apache2.conf",
+                "file": "/etc/apache2/apache2.conf"
+            },
+            {
+                "alias": "000-default.conf",
+                "file": "/etc/apache2/sites-enabled/000-default.conf"
+            },
+            {
+                "alias": "envvars",
+                "file": "/etc/apache2/envvars"
+            },
+            {
+                "alias": "bash.bashrc",
+                "file": "/etc/bash.bashrc"
+            },
+            {
+                "alias": "hosts",
+                "file": "/etc/hosts"
+            },
+            {
+                "alias": "my.cnf",
+                "file": "/etc/mysql/my.cnf"
+            },
+            {
+                "alias": "config.inc.php",
+                "file": "/etc/phpmyadmin/config.inc.php"
+            },
+            {
+                "alias": ".gitignore",
+                "file": "/home/x/.gitignore"
+            },
+            {
+                "alias": "apport",
+                "file": "/etc/default/apport"
+            }
+        ]
+    },
+    "version": 2
+}

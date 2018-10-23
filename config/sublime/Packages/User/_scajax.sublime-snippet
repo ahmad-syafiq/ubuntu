@@ -1,0 +1,38 @@
+<snippet>
+	<content><![CDATA[
+\$.ajax({
+	url : _URL+"product/cart",
+	type: "post",
+	data: {
+		"payment": \$("#cart_payment").val()
+	},
+	dataType: "html",
+	beforeSend: function() {
+	  \$(placeholder).addClass('loading');
+	},
+	success:function(result){
+		if (result == 'ok') {
+
+		}else{
+
+		};
+	},
+	error: function(xhr) { // if error occured
+		alert("Error occured.please try again");
+		\$(placeholder).append(xhr.statusText + xhr.responseText);
+		\$(placeholder).removeClass('loading');
+	},
+	complete: function() {
+		i--;
+		if (i <= 0) {
+		   \$(placeholder).removeClass('loading');
+		}
+	},
+});
+]]></content>
+<tabTrigger>_scajax</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

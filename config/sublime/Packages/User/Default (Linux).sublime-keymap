@@ -1,0 +1,54 @@
+[
+  { "keys": ["ctrl+1"], "command": "insert_snippet", "args": {"name": "Packages/User/myFunction.sublime-snippet"} },
+  { "keys": ["ctrl+alt+d"], "command": "sublimerge"},
+  { "keys": ["ctrl+alt+i"], "command": "sublimerge_toggle_edit"},
+  { "keys": ["alt+down"], "command": "sublimerge_go_down"},
+  { "keys": ["alt+up"], "command": "sublimerge_go_up"},
+  { "keys": ["ctrl+alt+,"], "command": "sublimerge_merge_left"},
+  { "keys": ["ctrl+alt+."], "command": "sublimerge_merge_right"},
+  { "keys": ["ctrl+alt+/", "ctrl+alt+,"], "command": "sublimerge_merge_left", "args": {"merge_all": true}},
+  { "keys": ["ctrl+alt+/", "ctrl+alt+."], "command": "sublimerge_merge_right", "args": {"merge_all": true}},
+  { "keys": ["ctrl+k", "ctrl+t"], "command": "title_case" },
+  { "keys": ["ctrl+;"], "command": "toggle_side_bar" },
+  { "keys": ["ctrl+f2"], "command": "build" },
+  { "keys": ["ctrl+shift+f2"], "command": "build", "args": {"variant": "Run"} },
+  { "keys": ["alt+b"], "command": "next_bookmark" },
+  { "keys": ["alt+shift+b"], "command": "prev_bookmark" },
+  { "keys": ["ctrl+b"], "command": "toggle_bookmark" },
+  { "keys": ["ctrl+shift+b"], "command": "clear_bookmarks" },
+  { "keys": ["alt+ctrl+b"], "command": "select_all_bookmarks" },
+  { "keys": ["alt+f"], "command": "code_formatter"},
+  { "keys": ["alt+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
+  { "keys": ["alt+c"], "command": "copy_path"},
+  { "keys": ["ctrl+shift+r"], "command": "open_dir", "args": {"dir": "$file_path", "file":"$file_name"}},
+  { "keys": ["ctrl+space"], "command": "auto_complete" },
+  { "keys": ["alt+r"], "command": "reveal_in_side_bar"},
+  { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+  { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+  { "keys": ["`"], "command": "insert_snippet", "args": {"contents": "`$0`"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
+      { "key": "preceding_text", "operator": "not_regex_contains", "operand": "[`a-zA-Z0-9_]$", "match_all": true },
+      { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single - punctuation.definition.string.end", "match_all": true }
+    ]
+  },
+  { "keys": ["`"], "command": "insert_snippet", "args": {"contents": "`${0:$SELECTION}`"}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+    ]
+  },
+  { "keys": ["`"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+    [
+      { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+      { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+      { "key": "following_text", "operator": "regex_contains", "operand": "^`", "match_all": true },
+      { "key": "selector", "operator": "not_equal", "operand": "punctuation.definition.string.begin", "match_all": true },
+      { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single - punctuation.definition.string.end", "match_all": true },
+    ]
+  },
+  { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
+  { "keys": ["ctrl+alt+a+i"], "command": "increment_selection" }
+]

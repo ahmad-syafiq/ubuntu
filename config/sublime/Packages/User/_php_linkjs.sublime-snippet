@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+\$sys->link_js(_URL.'${2:modules/invoice/admin/price}.js', false);
+
+]]></content>
+<tabTrigger>_php_linkjs</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

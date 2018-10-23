@@ -1,0 +1,17 @@
+#!/usr/bin/php
+<?php
+$file = file_exists('config.php') ? 'config.php' : (file_exists('cfg.php') ? 'cfg.php' : '');
+if (!empty($file) && file_exists('database.sql'))
+{
+	$_SERVER['HTTP_HOST'] = '';
+	include $file;
+	extract($_DB[0]);
+	echo shell_exec(
+		"\n"
+		. "/usr/bin/mysql -u {$USERNAME} --password='{$PASSWORD}' -h {$SERVER} -e 'DROP DATABASE IF EXISTS `{$DATABASE}`'\n"
+		. "/usr/bin/mysql -u {$USERNAME} --password='{$PASSWORD}' -h {$SERVER} -e 'CREATE DATABASE IF NOT EXISTS `{$DATABASE}`'\n"
+		. "/usr/bin/mysql -u {$USERNAME} --password='{$PASSWORD}' -h {$SERVER} {$DATABASE} < database.sql"
+	);
+}
+
+

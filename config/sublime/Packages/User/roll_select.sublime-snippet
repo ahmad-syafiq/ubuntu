@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+
+\$${1:form}->roll->addInput('${2:status}','select');
+\$${1:form}->roll->input->${2:status}->setTitle('${3:Title}');
+\$${1:form}->roll->input->${2:status}->setPlaintext(true);
+\$${1:form}->roll->input->${2:status}->addOption('Approved', '1');
+\$${1:form}->roll->input->${2:status}->addOption('<a href="'.seo_uri().'" rel="popup" class="register">Register</a>', '0');
+
+]]></content>
+<tabTrigger>roll_select</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

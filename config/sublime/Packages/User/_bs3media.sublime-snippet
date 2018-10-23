@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+/*LARGE*/
+@media (min-width: 1280px ) {}
+/*MEDIUM*/
+@media (min-width: 992px) and (max-width: 1280px) {}
+/* SMALL */
+@media (min-width: 768px) and (max-width: 992px) {}
+/* EXTRA SMALL */
+@media (max-width: 768px) {}
+]]></content>
+<tabTrigger>_bs3media</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

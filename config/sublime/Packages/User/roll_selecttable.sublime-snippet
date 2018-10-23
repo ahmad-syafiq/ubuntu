@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+
+\$${1:form}->roll->addInput('${2:cat_id}','selecttable');
+\$${1:form}->roll->input->${2:cat_id}->setTitle('${3:Title}');
+\$${1:form}->roll->input->${2:cat_id}->setReferenceTable('${4:filmes ORDER BY title | product_cat AS e LEFT JOIN product_cat_text AS t ON(e.id = t.cat_id)}');
+\$${1:form}->roll->input->${2:cat_id}->setReferenceField('${5:title}', '${6:cat_id}');
+\$${1:form}->roll->input->${2:cat_id}->setReferenceCondition(${7:'merchant_id = '.$merchant_id.' AND type_id=2 AND lang_id='.lang_id()});
+\$${1:form}->roll->input->${2:cat_id}->setReferenceNested('${8:par_id}');
+\$${1:form}->roll->input->${2:cat_id}->setAllowNew(${9:$bool_or_str, $add_query = array()});
+\$${1:form}->roll->input->${2:cat_id}->setDB('db1');
+\$${1:form}->roll->input->${2:cat_id}->setAutoComplete();
+\$${1:form}->roll->input->${2:cat_id}->addHelp('${10:Help}');
+
+]]></content>
+<tabTrigger>roll_selecttable</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

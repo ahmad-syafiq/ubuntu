@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+
+\$${1:form}->roll->addInput('${2:id}','sqlplaintext');
+\$${1:form}->roll->input->${2:id}->setTitle('${3:Title}');
+\$${1:form}->roll->input->${2:id}->addHelp('${4:Help}');
+\$${1:form}->roll->input->${2:id}->setExtra(array('<a href="${5:#}" class="${6:Class}">','</a>'));
+
+]]></content>
+<tabTrigger>roll_sqlplaintext</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

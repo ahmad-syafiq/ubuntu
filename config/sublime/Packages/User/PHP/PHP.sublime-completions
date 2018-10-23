@@ -1,0 +1,19 @@
+{
+	"scope": "source.php - variable.other.php",
+
+	"completions":
+	[
+		"php",
+		{ "trigger": "__", "contents": "pr(${1:debuger}, __FILE__.':'.__LINE__);" },
+		{ "trigger": "is_email", "contents": "is_email('${1:str}');" },
+		{ "trigger": "is_phone", "contents": "is_phone('${1:str}');" },
+		{ "trigger": "is_url", "contents": "is_url('${1:str}');" },
+		{ "trigger": "redirect", "contents": "redirect('${1:arg}');" },
+		{ "trigger": "_class", "contents": "_class('${1:str}');" },
+		{ "trigger": "_func", "contents": "_func('${1:str}');" },
+		{ "trigger": "_lib", "contents": "_lib('${1:str}');" },
+		{ "trigger": "addslashes_r", "contents": "addslashes_r(${1:array});" },
+		{ "trigger": "stripslashes_r", "contents": "stripslashes_r(${1:array});" },
+		{ "trigger": "urldecode_r", "contents": "urldecode_r(${1:array});" },
+	]
+}
