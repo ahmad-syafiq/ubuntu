@@ -39,7 +39,7 @@ echo "\n" | sudo add-apt-repository ppa:ondrej/php
 #echo "\n" | sudo add-apt-repository ppa:ondrej/pkg-gearman
 echo "\n" | sudo add-apt-repository ppa:ondrej/apache2
 sudo apt-get update -y
-sudo apt-get install -y php7.0 php7.0-curl php7.0-fpm php7.0-mysql php7.0-mysqlnd php7.0-cli php7.0-gd php7.0-mbstring php7.0-mcrypt php7.0-xml apache2 libapache2-mod-php7.0 curl mlocate zip unzip git
+sudo apt-get install -y php7.0 php7.0-curl php7.0-fpm php7.0-mysql php7.0-mysqlnd php7.0-cli php7.0-gd php7.0-mbstring php7.0-mcrypt php7.0-xml php7.0-zip apache2 libapache2-mod-php7.0 curl mlocate zip unzip git
 
 
 clear && clear
@@ -121,6 +121,7 @@ git clone https://github.com/markbirbeck/sublime-text-shell-command.git
 git clone https://github.com/titoBouzout/Tag.git
 git clone https://github.com/jarod2d/sublime_valign.git
 git clone https://github.com/JasonMortonNZ/bs3-sublime-plugin.git
+git clone https://github.com/akalongman/sublimetext-codeformatter.git
 cd ~/tmp/
 
 
@@ -142,10 +143,13 @@ sh /opt/smartgit/bin/add-menuitem.sh
 
 clear && clear
 echo '## SETUP Mysql Tools'
+cd ~/tmp/
+wget -c 'https://www.valentina-db.com/en/studio/download/current/vstudio_x64_lin.deb'
+mv vstudio_x64_lin-deb\?format\=raw vstudio_x64_lin.deb
+sudo dpkg -i vstudio_x64_lin.deb
+
 # sudo apt-get install mysql-workbench
-echo "\n" | sudo add-apt-repository ppa:dismine/valentina
-sudo apt-get update -y
-sudo apt-get install -y valentina
+
 
 
 clear && clear
@@ -181,3 +185,49 @@ cd multi-monitors-add-on
 cp -r multi-monitors-add-on@spin83 ~/.local/share/gnome-shell/extensions
 sudo apt-get install gnome-tweak-tool
 # after restart pc, press alt + f2 type r and open tweaks -> extensions
+
+
+clear && clear
+echo '## Install WPS'
+cd ~/tmp/
+wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
+sudo apt-get install ./wps-office_10.1.0.6757_amd64.deb
+sudo apt-get --reinstall install ttf-mscorefonts-installer
+sudo fc-cache -vfs
+
+
+
+clear && clear
+echo '## Install Youtube Dl'
+cd ~/tmp/
+sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+x /usr/local/bin/youtube-dl
+hash -r
+mkdir /home/x/Documents/sh/
+cp -r config/youtube.sh /home/x/Documents/sh/
+
+
+clear && clear
+echo '## Install Net Tools'
+sudo apt-get install -y net-tools
+
+
+clear && clear
+echo '## Install XDM'
+sudo mkdir /opt/xdm/
+sudo chown -R x:x /opt/xdm/
+cd /opt/xdm/
+wget -O xdm64.tar.xz https://sourceforge.net/projects/xdman/files/xdm-2018-x64.tar.xz/download
+tar -xvf xdm64.tar.xz
+sudo ./install.sh
+
+
+
+
+# Deepin Scren
+sudo apt-get install -y python-xlib python-gtk2 libcanberra-gtk-module
+
+
+
+# sshfs
+sudo apt-get install -y sshfs
