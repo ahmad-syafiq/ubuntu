@@ -77,6 +77,63 @@ function iLog($text, $is_print = false, $is_html = true)
 			echo "\n".$f."\n";
 		}
 	}else{
-		file_put_contents('/home/x/Desktop/ilog.txt', date('Y-m-d H:i:s: ').$f."\n".print_r($text, 1)."\n\n", FILE_APPEND);
+		file_put_contents('/Users/x/Sites/ilog.txt', date('Y-m-d H:i:s: ').$f."\n".print_r($text, 1)."\n\n", FILE_APPEND);
 	}
+}
+function tm($msg, $no = '46117066')
+{
+	$token  = '132809481:AAHgfAX6mO7H8mz4D5byLDIE40kbIEES338'; // @fisip_bot
+	$init   = curl_init( 'https://api.telegram.org/bot'.$token.'/sendMessage');
+	$output = array();
+	$tm_id  = is_array($no) ? $no : array($no);
+	foreach ($tm_id as $id)
+	{
+		if (!is_numeric($id))
+		{
+			$file = '/Users/me/Documents/git/tmdir/'.$id.'.tm';
+			if (is_file($file))
+			{
+				$id = trim(file_get_contents($file));
+			}
+		}
+		if (is_numeric($id))
+		{
+			$post   = array(
+				'chat_id' => $id,
+				'text'    => $msg
+				);
+			curl_setopt($init, CURLOPT_POST, 1);
+		  curl_setopt($init, CURLOPT_POSTFIELDS, $post);
+		  curl_setopt($init, CURLOPT_FOLLOWLOCATION, 0);
+		  curl_setopt($init, CURLOPT_RETURNTRANSFER, 1);
+		  curl_setopt($init, CURLOPT_SSL_VERIFYPEER, 0);
+		  curl_setopt($init, CURLOPT_SSL_VERIFYHOST , 0);
+		  $output[] = curl_exec($init);
+		  /*
+		  SAMPLE OUTPUT:
+			{
+			    "ok": true,
+			    "result": {
+			        "message_id": 1178,
+			        "from": {
+			            "id": 132809481,
+			            "first_name": "Fisip Net",
+			            "username": "fisip_bot"
+			        },
+			        "chat": {
+			            "id": 88096365,
+			            "first_name": "Danang",
+			            "last_name": "Widiantoro",
+			            "username": "bbc_danang",
+			            "type": "private"
+			        },
+			        "date": 1468733790,
+			        "text": "2016-07-17 12:36:27"
+			    }
+			}
+		  */
+		}
+	}
+	curl_close($init);
+  return $output;
 }
