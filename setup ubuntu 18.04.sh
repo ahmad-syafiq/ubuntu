@@ -2,6 +2,7 @@
 USER='x'
 PWD='1'
 PWD_MySQL='1'
+SMARTGIT='19_1_1'
 
 if [ -d "config" ] 
 then
@@ -170,8 +171,8 @@ then
 	# sudo update-java-alternatives --set java-1.8.0-openjdk-amd64
 	# echo "jre=/usr/lib/jvm/java-1.8.0-openjdk-amd64/ >> ~/.smartgit/smartgit.vmoptions"
 	# sudo apt-get install -y smartgithg
-	wget https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_1_5.tar.gz
-	tar -xvf smartgit-linux-18_1_5.tar.gz
+	wget https://www.syntevo.com/downloads/smartgit/smartgit-linux-$SMARTGIT.tar.gz
+	tar -xvf smartgit-linux-$SMARTGIT.tar.gz
 	sudo mv smartgit /opt/
 	sh /opt/smartgit/bin/add-menuitem.sh
 
