@@ -99,6 +99,7 @@ if (!empty($dbname)) {
     $cfg['Servers'][$i]['central_columns'] = 'pma__central_columns';
     $cfg['Servers'][$i]['designer_settings'] = 'pma__designer_settings';
     $cfg['Servers'][$i]['export_templates'] = 'pma__export_templates';
+    $cfg['Servers'][$i]['hide_db'] = 'information_schema|mysql|performance_schema|phpmyadmin|sys';
 
     /* Uncomment the following to enable logging in to passwordless accounts,
      * after taking note of the associated security risks. */
