@@ -140,24 +140,24 @@ then
 	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 	sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
 	sudo apt-get install sublime-text
-	cp -rf config/sublime/Installed\ Packages/ /home/$USER/.config/sublime-text-3/
-	cp -rf config/sublime/Packages/User/* /home/$USER/.config/sublime-text-3/Packages/User
+	sudo cp -rf config/sublime/Installed\ Packages/ /home/$USER/.config/sublime-text-3/
+	sudo cp -rf config/sublime/Packages/User/* /home/$USER/.config/sublime-text-3/Packages/User
 	cd ~/.config/sublime-text-3/Packages
-	git clone https://github.com/facelessuser/FavoriteFiles.git
-	git clone https://github.com/sergeche/emmet-sublime.git
-	git clone https://github.com/brianlow/FileRename.git
-	git clone https://github.com/jisaacks/GitGutter.git
-	git clone https://github.com/kemayo/sublime-text-git.git
-	git clone https://github.com/yulanggong/IncrementSelection.git
-	git clone https://github.com/jdavisclark/JsFormat.git
-	git clone https://github.com/titoBouzout/Open-Include.git
-	git clone https://github.com/henrikpersson/rsub.git
-	git clone https://github.com/markbirbeck/sublime-text-shell-command.git
-	git clone https://github.com/titoBouzout/Tag.git
-	git clone https://github.com/jarod2d/sublime_valign.git
-	git clone https://github.com/JasonMortonNZ/bs3-sublime-plugin.git
-	git clone https://github.com/akalongman/sublimetext-codeformatter.git
-	git clone https://github.com/esoftplay/sublimetext-snippets.git
+	sudo git clone https://github.com/facelessuser/FavoriteFiles.git
+	sudo git clone https://github.com/sergeche/emmet-sublime.git
+	sudo git clone https://github.com/brianlow/FileRename.git
+	sudo git clone https://github.com/jisaacks/GitGutter.git
+	sudo git clone https://github.com/kemayo/sublime-text-git.git
+	sudo git clone https://github.com/yulanggong/IncrementSelection.git
+	sudo git clone https://github.com/jdavisclark/JsFormat.git
+	sudo git clone https://github.com/titoBouzout/Open-Include.git
+	sudo git clone https://github.com/henrikpersson/rsub.git
+	sudo git clone https://github.com/markbirbeck/sublime-text-shell-command.git
+	sudo git clone https://github.com/titoBouzout/Tag.git
+	sudo git clone https://github.com/jarod2d/sublime_valign.git
+	sudo git clone https://github.com/JasonMortonNZ/bs3-sublime-plugin.git
+	sudo git clone https://github.com/akalongman/sublimetext-codeformatter.git
+	sudo git clone https://github.com/esoftplay/sublimetext-snippets.git
 	cd ~/tmp/
 
 
@@ -219,7 +219,7 @@ then
 	git clone git://github.com/spin83/multi-monitors-add-on.git
 	cd multi-monitors-add-on
 	cp -r multi-monitors-add-on@spin83 ~/.local/share/gnome-shell/extensions
-	sudo apt-get install gnome-tweak-tool
+	sudo apt-get install -y gnome-tweak-tool
 	# after restart pc, press alt + f2 type r and open tweaks -> extensions
 
 
@@ -227,8 +227,8 @@ then
 	echo '## Install WPS'
 	cd ~/tmp/
 	wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
-	sudo apt-get install ./wps-office_10.1.0.6757_amd64.deb
-	sudo apt-get --reinstall install ttf-mscorefonts-installer
+	sudo apt-get install -y ./wps-office_10.1.0.6757_amd64.deb
+	sudo apt-get --reinstall install -y ttf-mscorefonts-installer
 	sudo fc-cache -vfs
 
 
