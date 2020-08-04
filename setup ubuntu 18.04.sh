@@ -3,7 +3,7 @@ USER='x'
 PWD='1'
 PWD_MySQL='1'
 SMARTGIT='19_1_1'
-
+#file clone pindah ke ~/tmp buat script untuk clone di ~/tmp kemudian eksekusi perintah sh yg barusan di clone
 if [ -d "config" ] 
 then
 
