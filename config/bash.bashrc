@@ -39,16 +39,7 @@ PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 
 
 # SERVER ALIAS #
-	alias cyberius='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@139.59.108.57;};a'
-	alias esp='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@esoftplay.com;};a'
-	alias futago='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@43.245.180.223;};a'
-	alias graha='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@103.43.44.112;};a'
-	alias grillman='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@103.23.21.148;};a'
-	alias gs='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -p 2222 -R 52698:localhost:52698 "$B"@43.245.180.223;};a'
-	alias hotel='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -p 2277 -R 52692:localhost:52698 "$B"@ehotel.co.id;};a'
-	alias kembar='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@108.167.139.245;};a'
-	alias ontrip='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@103.43.44.136;};a'
-	alias wonder='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -p 2277 -R 52698:localhost:52698 "$B"@103.23.21.182;};a'
+	alias esoftplay='function a(){ B="$@"; if [ -z "$B" ]; then B="root";fi;ssh -R 52692:localhost:52698 "$B"@52.76.122.17;};a'
 # SERVER ALIAS #
 
 # GIT ALIAS #
@@ -58,7 +49,10 @@ PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 	alias pulltools='cd /opt/tools/ && git checkout . && git clean -df && git pull'
 	alias remaster='cd /var/www/html/master && git fetch origin master && git reset --hard FETCH_HEAD && git clean -df'
 	alias info='git config --get remote.origin.url'
+	alias pushmaster='git checkout master && git pull origin master && git merge dev && git push origin master && git checkout dev'
+	alias pullfork='function a(){ B="$@"; if [ -z "$B" ]; then B="binary";fi;git checkout . && git clean -df && git pull https://github.com/esoftplay/"$@".git master; };a'
 # GIT ALIAS #
+
 
 # REACT ALIAS #
 	alias build='function a(){ B="$@"; if [ -z "$B" ]; then B="android";fi;exp build:"$B";};a'
@@ -74,16 +68,20 @@ PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 	alias fix='find . \( -path ./images -o -path ./bahan -o -path ./cgi-bin/mobile \) -prune -o -type d -exec chmod 755 {} \; && find . \( -path "./images/*" -o -path "./bahan/*" \) -prune -o -type f -exec chmod 644 {} \; && find templates/. -name style.css -exec chmod 777 {} \; && chmod -R 777 ./images && rm -rf ./images/cache;'
 	alias gear='function a(){ gearadmin --$@; };a'
 	alias gear_start='php /var/www/html/master/includes/class/async.php &'
-	alias general='function localhost(){ cd "/var/www/html/general/$@"; };localhost'
-	alias importdb='sh ~/Documents/sh/importdb.sh'
 	alias ip='curl ipinfo.io/ip'
-	alias lc='function localhost(){ cd "/var/www/html/$@"; };localhost'
+	alias lc='function a(){ 
+							B="$@"; 
+							if [ "$B" = "master" ]; 
+								then cd "/var/www/html/"; 
+							else 
+								cd "/Users/x/Sites/$B"; 
+							fi;};a'
 	alias php5.5='sudo a2dismod php5.6 && sudo a2dismod php7.0 && sudo a2dismod php7.1 && sudo a2enmod php5 && sudo update-alternatives --set php /usr/bin/php5 && sudo service apache2 restart'
 	alias php5.6='sudo a2dismod php7.0 && sudo a2dismod php7.1 && sudo a2enmod php5.6 && sudo update-alternatives --set php /usr/bin/php5.6 && sudo service apache2 restart'
 	alias php7.0='sudo a2dismod php5.6 && sudo a2dismod php7.1 && sudo a2enmod php7.0 && sudo update-alternatives --set php /usr/bin/php7.0 && sudo service apache2 restart'
 	alias php7.1='sudo a2dismod php5.6 && sudo a2dismod php7.0 && sudo a2enmod php7.1 && sudo update-alternatives --set php /usr/bin/php7.1 && sudo service apache2 restart'
-	alias up='function up(){ cd "/home/x/Documents/sh/upload/$@"; };up'
-	alias down='function down(){ cd "/home/x/Documents/sh/download/$@"; };down'
+	alias upload='function up(){ cd "/Users/x/Documents/Sync/Upload/$@"; };up'
+	alias download='function down(){ cd "/Users/x/Documents/Sync/Download/$@"; };down'
 # PHP ALIAS #
 
 
