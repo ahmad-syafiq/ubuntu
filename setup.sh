@@ -2,9 +2,9 @@
 USER='x'
 PWD='1'
 PWD_MySQL='1'
-SMARTGIT='19_1_1'
+SMARTGIT='20_1_4'
 #file clone pindah ke ~/tmp buat script untuk clone di ~/tmp kemudian eksekusi perintah sh yg barusan di clone
-if [ -d "config" ] 
+if [ -d "~/tmp/config" ] 
 then
 
 	mkdir -p ~/tmp/
@@ -269,5 +269,5 @@ then
 
 
 else
-  echo "Error: Directory config does not exists."
+  echo "Error: Directory config does not exists in ~/tmp/."
 fi
