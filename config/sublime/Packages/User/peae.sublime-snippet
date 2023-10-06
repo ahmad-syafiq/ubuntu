@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+\$${5:form} = _lib('pea',  '${1:table_name}');
+\$${5:form}->initEdit(!empty(\$${2:id}) ? 'WHERE id='.\$${2:id} : '');${6:
+\$${5:form}->edit->setLanguage();
+}
+\$${5:form}->edit->addInput('header','header');
+\$${5:form}->edit->input->header->setTitle(!empty(\$${2:id}) ? '${3:Edit Data}' : '${4:Add Data}');
+
+\$${5:form}->edit->addInput('${8:title}','text');
+\$${5:form}->edit->input->${8:title}->setTitle('${9:Title}');${7:
+\$${5:form}->edit->input->${8:title}->setLanguage();
+}
+${10:\$${5:form}->edit->action();
+}echo \$${5:form}->edit->getForm();
+]]></content>
+<tabTrigger>peae</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

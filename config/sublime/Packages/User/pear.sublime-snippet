@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+\$${3:form} = _lib('pea',  '${1:table_name}');
+\$${3:form}->initRoll("${2:WHERE 1 ORDER BY id DESC}");${4:
+
+\$${3:form}->roll->setLanguage();}${9:
+\$${3:form}->roll->setSaveTool(${10:true});
+
+}\$${3:form}->roll->addInput('${6:title}','sqlplaintext');
+\$${3:form}->roll->input->${6:title}->setTitle('${7:Title}');${5:
+\$${3:form}->roll->input->${6:title}->setLanguage();
+}
+${8:\$${3:form}->roll->action();
+}echo \$${3:form}->roll->getForm();
+]]></content>
+<tabTrigger>pear</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

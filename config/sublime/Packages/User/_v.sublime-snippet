@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-<?php  if (!defined('_VALID_')) exit('No direct script access allowed');
+<?php  if (!defined('_VALID_BBC')) exit('No direct script access allowed');
 
 
 ]]></content>
-<tabTrigger>_vq</tabTrigger>
+<tabTrigger>_v</tabTrigger>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<!-- <tabTrigger>hello</tabTrigger> -->
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+\$${2:form} = _lib('pea',  '${1:table_name}');
+\$${2:form}->initSearch();
+
+\$${2:form}->search->addInput('keyword','keyword');
+\$${2:form}->search->input->keyword->addSearchField('${3:name, content}', ${4:true});
+
+\$sql     = \$${2:form}->search->action();
+\$keyword = \$${2:form}->search->keyword();
+
+echo \$${2:form}->search->getForm();
+]]></content>
+<tabTrigger>peas</tabTrigger>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -18,11 +18,17 @@ then
 	
 	echo $PASS | sudo -S echo '## Start Installation'
 
-	source "config/install/install-ssh.sh"
-	
-	echo "Welcome ${USERNAME}!"
-	echo "Your email is ${EMAIL}."
-	
+	sudo apt clean -y && sudo rm -r /var/lib/apt/lists && sudo apt update -y && sudo apt upgrade -y
+	sudo cp -f /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
+	sudo apt install software-properties-common
+
+	sudo cp -f config/bash.bashrc ~/.bashrc && . ~/.bashrc
+
+	. "config/install/ssh.sh"
+	. "config/install/sshd.sh"
+	. "config/install/sublime.sh"
+	. "config/install/php74.sh"
+	. "config/install/apache2.sh"
 
 else
   echo "Error: Directory config does not exists in ~/tmp/."
