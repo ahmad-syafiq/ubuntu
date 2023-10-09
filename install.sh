@@ -11,6 +11,12 @@ then
  read -p "Masukkan password ubuntu Anda : " PASS
 fi
 
+PASS_SQL="$3"
+if [ -z "$PASS_SQL" ]
+then
+ read -p "Masukkan password MySQL Anda : " PASS_SQL
+fi
+
 
 if [ -d "$HOME/tmp/config" ] 
 then
@@ -29,6 +35,9 @@ then
 	. "config/install/sublime.sh"
 	. "config/install/php74.sh"
 	. "config/install/apache2.sh"
+	. "config/install/mysql57.sh"
+	. "config/install/phpmyadmin.sh"
+	. "config/install/master.sh"
 
 else
   echo "Error: Directory config does not exists in ~/tmp/."

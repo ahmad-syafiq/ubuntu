@@ -2,11 +2,12 @@
 
 clear && clear
 echo '## Install Sublime Text 3'
+cd ~/tmp/
+
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "\n" | sudo apt-add-repository "deb https://download.sublimetext.com/ apt/stable/"
 sudo apt-get install sublime-text
 
-cd ~/tmp/
 sudo cp -rf config/sublime/Installed\ Packages/ ~/.config/sublime-text/
 sudo cp -rf config/sublime/Packages/User/* ~/.config/sublime-text/Packages/User
 
