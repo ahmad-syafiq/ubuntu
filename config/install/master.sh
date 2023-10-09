@@ -6,7 +6,7 @@ cd /var/www/html && git clone https://github.com/esoftplay/master.git
 
 cd ~/tmp
 sed -e 's/'\''PASSWORD'\'' => '\''1'\'',/'\''PASSWORD'\'' => '\'''$PASS_SQL''\'',/g' config/config_master.php > config/config.php
-cp -r config/config_master.php /var/www/html/master/config.php
+mv -f config/config.php /var/www/html/master/config.php
 
 git config --global core.excludesfile '~/.gitignore'
 cp -r config/.gitignore ~/.gitignore
