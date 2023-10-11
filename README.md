@@ -5,3 +5,8 @@ install git in your computer
 
 clone this in `~/tmp/` put in current dir
 * `mkdir -p ~/tmp/ && cd ~/tmp/ && git clone https://github.com/ahmad-syafiq/ubuntu.git .`
+
+install 
+* `sh ~/tmp/install.sh`
+
+- 
