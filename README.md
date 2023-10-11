@@ -11,9 +11,9 @@ run installer
 
 notes :
 - Configuring mysql-apt-config
-	- Add repository to unsupported system?
+	- Add repository to unsupported system? <br />
 		select `ubuntu bionic` then `ok`
-	- Which MySQL product do you wish to configure?
+	- Which MySQL product do you wish to configure? <br />
 		select `MySQL Server & Cluster (Currently selected: mysql-8.0)` change to `MySQL Server & Cluster (Currently selected: mysql-5.7)` then `ok`
 
 - Configuring mysql-community-server
