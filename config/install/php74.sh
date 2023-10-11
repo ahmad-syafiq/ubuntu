@@ -4,6 +4,7 @@ clear && clear
 echo '## Install PHP'
 
 echo "\n" | sudo add-apt-repository ppa:ondrej/php -y &&
+sudo apt update &&
 sudo apt install -y php7.4 && 
 sudo apt install -y php7.4-{cli,common,curl,zip,gd,mysql,mysqli,mysqlnd,pdo-mysql,xml,mbstring,json,intl} &&
 

@@ -16,7 +16,6 @@ sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
 # select mysql-5.7
 # select ok
 
-sudo apt update
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
 sudo apt update
 
