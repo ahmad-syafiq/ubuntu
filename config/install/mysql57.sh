@@ -27,7 +27,7 @@ sudo apt install -f -y mysql-client=5.7* mysql-community-server=5.7* mysql-serve
 sudo mysql_secure_installation
 # input root password
 # N => Setup VALIDATE PASSWORD login?
-# Y => Change the password for root?s
+# Y => Change the password for root?
 # input root password
 # re-type root password
 # Y => Remove anonymous users?

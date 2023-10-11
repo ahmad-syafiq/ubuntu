@@ -30,8 +30,6 @@ then
 	sudo apt install -y plocate
 
 	sudo cp -f config/bash.bashrc ~/.bashrc
-	sleep 3
-	. ~/.bashrc
 
 	. "config/install/ssh.sh"
 	. "config/install/sshd.sh"
@@ -42,6 +40,7 @@ then
 	. "config/install/phpmyadmin.sh"
 	. "config/install/master.sh"
 
+	echo "All Done.."
 else
   echo "Error: Directory config does not exists in ~/tmp/."
 fi

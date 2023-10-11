@@ -17,6 +17,7 @@ cd /opt/
 sudo git clone https://github.com/esoftplay/tools.git
 
 cd /var/www/html/master/ && udump
+. ~/.bashrc
 fix
 
 cd ~/tmp/
