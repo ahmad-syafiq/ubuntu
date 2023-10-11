@@ -30,6 +30,7 @@ then
 	sudo apt install -y plocate
 
 	sudo cp -f config/bash.bashrc ~/.bashrc
+	sleep 3
 	. ~/.bashrc
 
 	. "config/install/ssh.sh"
