@@ -27,8 +27,10 @@ then
 	sudo apt clean -y && sudo rm -r /var/lib/apt/lists && sudo apt update -y && sudo apt upgrade -y
 	sudo cp -f /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 	sudo apt install software-properties-common
+	sudo apt install -y plocate
 
-	sudo cp -f config/bash.bashrc ~/.bashrc && . ~/.bashrc
+	sudo cp -f config/bash.bashrc ~/.bashrc
+	. ~/.bashrc
 
 	. "config/install/ssh.sh"
 	. "config/install/sshd.sh"
