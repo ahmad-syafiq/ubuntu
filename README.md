@@ -9,7 +9,7 @@ clone this in `~/tmp/` put in current dir
 run installer
 * `sh ~/tmp/install.sh`
 
-notes :
+# notes :
 - Configuring mysql-apt-config
 	- Add repository to unsupported system? <br />
 		select `ubuntu bionic`  <br />
