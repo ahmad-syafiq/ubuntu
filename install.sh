@@ -30,16 +30,18 @@ then
 	sudo apt install -y plocate
 
 	sudo cp -f config/bash.bashrc ~/.bashrc
+	. ~/.bashrc
 
 	. "config/install/ssh.sh"
 	. "config/install/sshd.sh"
 	. "config/install/sublime.sh"
-	. "config/install/php74.sh"
 	. "config/install/apache2.sh"
 	. "config/install/mysql57.sh"
+	. "config/install/php74.sh"
 	. "config/install/phpmyadmin.sh"
 	. "config/install/master.sh"
 
+	clear && clear
 	echo "All Done.."
 else
   echo "Error: Directory config does not exists in ~/tmp/."
