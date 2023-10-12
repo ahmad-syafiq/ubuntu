@@ -31,3 +31,4 @@ git clone https://github.com/JasonMortonNZ/bs3-sublime-plugin.git
 git clone https://github.com/akalongman/sublimetext-codeformatter.git
 git clone https://github.com/esoftplay/sublimetext-snippets.git
 
+cd ~/tmp/
