@@ -28,7 +28,7 @@ then
 	sudo apt clean -y && sudo rm -r /var/lib/apt/lists && sudo apt update -y && sudo apt upgrade -y
 	sudo cp -f /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 	sudo apt install software-properties-common
-	sudo apt install -y plocate
+	sudo apt install -y plocate curl
 
 	sudo cp -f config/bash.bashrc ~/.bashrc && . ~/.bashrc
 

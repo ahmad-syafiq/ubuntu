@@ -17,7 +17,7 @@ cd /opt/
 sudo git clone https://github.com/esoftplay/tools.git
 
 cd /var/www/html/master/ && udump
-. ~/.bashrc
+curl -X POST -F username=all -F password=123456 -F Submit=Submit http://localhost/master/tools/reset
 fix
 
 cd ~/tmp/
