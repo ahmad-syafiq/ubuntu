@@ -30,7 +30,7 @@ then
 	sudo apt install software-properties-common
 	sudo apt install -y plocate
 
-	sudo cp -f config/bash.bashrc ~/.bashrc && exec bash -l
+	sudo cp -f config/bash.bashrc ~/.bashrc && . ~/.bashrc
 
 	. "config/install/ssh.sh"
 	. "config/install/sshd.sh"
