@@ -24,6 +24,7 @@ then
 	
 	echo $PASS | sudo -S echo '## Start Installation'
 
+	sudo sed -i 's/http:\/\/[a-z.]*archive\.ubuntu\.com/http:\/\/archive.ubuntu.com/g' /etc/apt/sources.list
 	sudo apt clean -y && sudo rm -r /var/lib/apt/lists && sudo apt update -y && sudo apt upgrade -y
 	sudo cp -f /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 	sudo apt install software-properties-common
